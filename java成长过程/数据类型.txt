@@ -1,0 +1,40 @@
+
+public class helloworld {
+	public static void main(String[] args) {//其中快捷键的使用，输入main直接按Alt +/可以输出整个main函数
+											//同样syso使用相同快捷键可以显示输出流，tr可显示try、catch函数
+		int num;
+		num = 12;
+		num = 24;
+		num = 36;//多次给同一变量赋值后面数据会覆盖前面数据的值  
+		System.out.println(num + "\n");	//java中下一个syso会自动换行，所以不需要和C语言一样单独加“\n”来进行换行输出
+		
+		
+		double a = 12.35456;
+		System.out.println(a);
+		float b = 21.5467f;//java中float数据强制用f结尾（F大写也可以）
+//		float为16位单精度，double为32位双精度，所以要想表示小数的时候用double反而更方便。		
+		System.out.println(b);
+		
+		
+		char str1 = '雨';//char两位，只能储存一个字符；当输入数字时，默认按照ASCII码表输出对应字符
+		String str2 = "落红不是无情物"; //string首字母要大写，其余变量首字母要小写，命名上依然采用驼峰法
+		System.out.println(str1);
+		System.out.println(str2);
+		final int D = 2333;//java 的常量为final，与C不同，需要加数据类型
+		System.out.println(D);
+		
+		String str3 = "45";
+		int qwe = 50;
+		str3 = str3 + 50;
+		System.out.println(str3);//会直接拼接到字符串后面。和C不同，不需要专门的字符串拼接函数
+//		数据精确度和位数不同时，只能范围大的对范围小的进行运算（防止溢出）
+//		char test = 'A';  	与C不同，java禁止直接对和字符相关的数据的直接操作
+//		int test1 = 26;
+//		test =  test - test1;
+//		直接给出数字的时候会将长度和精确度小的数据自动向较大的类型进行转换byte->char->short->int->long->float->double
+//		java中byte和short在处理的时候都是默认按照int来处理的，直接给出的数字也是作为int来处理
+//		强制类型转换和C相同，在需要转换的数据前面加括号，里面放数据类型
+		
+		
+	}
+}
