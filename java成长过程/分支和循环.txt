@@ -1,0 +1,28 @@
+package javaproject;
+
+public class JAVA_3RD {
+	public static void main(String[] args) {
+		String a = "qwe";
+		String b = "asd";
+		int i = 11;
+		System.out.println(a.equals(b));//字符串判断相等时要用equals函数，不能直接等于
+//		当使用==时，判断的是两个字符串的地址，但是数值可以直接用==来判等
+//		switch(i) {
+//		case 1:			条件判断： 
+//			break;
+//		default :
+//			break;		都不满足
+//		}
+		System.out.print("3514");//println 打印的字符串会换行，但是print打印的是当行的数据，都在一行
+		while(i<13)//while循环是当循环条件内判断成立的时候执行
+		{
+			i++;
+			System.out.println(i);
+		}
+		do {
+			i++;
+			System.out.println(i);
+		}while(i<14);//do-while也是在满足判断条件的时候就执行，与while不同的是它必须先执行一次，然后记得在do-while循环最后的条件后面加括号wwww
+	}
+	
+}
