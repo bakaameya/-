@@ -1,0 +1,31 @@
+package javaproject;
+import java.util.*;
+
+public class JAVA_4TH_Array {
+	public static void main(String[] args) {		
+		String a[] = new String[3];
+		int b[][] = new int[2][3];//生成一个二维数组
+//		当使用静态数组时，内部的大括号每一个都是一行，其中的元素是行内的一个元素。java会自动识别行列数
+		test(a);//函数调用和C相同
+		System.out.println(a[0]);
+		for(int i = 0;i<b.length;i++)
+		{
+			for(int j = 0;j<b[i].length;j++)//在这里是得到第i行的元素个数，从而得到列数
+			{
+				System.out.print(b[i][j]+"\t");
+			}
+			System.out.println();
+		}
+	}
+	public static void test(String a[]){
+//		java函数是静态方法，自行选择方法可调用类型和返回值类型
+		Scanner input = new Scanner(System.in);
+//		通常来讲不关闭是不会报错的,但是关闭输入流是个好习惯(无需关闭的原因是因为程序只有一个输入就结束了)
+		for(int i = 0;i<a.length;i++)
+		{
+			String str = input.next();
+			a[i] = str;
+		}
+		input.close();//关闭input输入流
+	}
+}

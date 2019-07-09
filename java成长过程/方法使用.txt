@@ -1,0 +1,30 @@
+package javaproject;
+
+public class JAVA_5TH_Method {
+	public static void main(String[] args) {
+//		java中方法就是函数，只不过要加java自己的修饰符，其他内容和C一样
+//		java中非空方法必须要有返回值，否则会报错（语法相对严谨）
+//		当然，返回值数据类型、参数传递数据类型、和方法中使用的数据类型都是要相同的，这点需要注意
+		int a = test("7","7");
+		int b = a + 1;
+		System.out.println(b);
+	}
+	public static int test(String a,String b)
+	{
+		int sum;
+		sum = Integer.parseInt(a + b);
+//		sum = (String)(a + b);这里注意我以为是老师没加括号，实则强转并不能把int转成string
+//		String s = String.valueOf( value);数据转string
+		/* 各种强转的方法
+		 * byte b = Byte.parseByte( s ); 
+		short t = Short.parseShort( s ); 
+		int i = Integer.parseInt( s ); 
+		long l = Long.parseLong( s ); 
+		Float f = Float.parseFloat( s ); 
+		Double d = Double.parseDouble( s );*/
+		return sum;
+	}
+//	关于方法的重载：
+//	方法的重载是对相同名称方法的一个重新定义，在函数调用时，编译器会根据传入参数的个数、类型等自动去调用相应的方法。
+//	注意，无论是数据类型还是参数个数，方法重载时相同的只能是方法名，其它必须有一个不相同的地方，否则编译器会因为调用时无法识别具体调用哪个方法而报错。
+}
