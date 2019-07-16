@@ -1,0 +1,11 @@
+package JAVA_7TH;
+
+public class Test0 {
+	public static void main(String[] args) {
+		Test qwe = new Test("35135",13,12);
+		qwe.output();
+		Test.jkl();//这里静态方法可以直接用类名.方法名来调用，而且这种调用不占内存。
+//		P.S：但是如果你创建的不是静态方法的话那么想要调用其他类的方法就必须创建一个对象开辟内存之后才能调用。
+		
+	}
+}

@@ -1,0 +1,52 @@
+package JAVA_7TH;
+
+public class Test {
+	String a;
+	int b;
+	double c;
+	char d;
+	private static String e = "112345a";
+//	静态只会在内存中储存一次，在成员变量每次的值都不变时适合使用。
+//	因为static变量会被所有的成员所共有，从而只在内存中加载一次，大大提高了代码的效率。
+//	static优先级最高，在初始化时就会被加载，不需要对象、方法等来调用。所以如果static中有输出的话会被最先显示
+	Test(){}
+	Test(String x,int y)
+	{
+		this(x);//使用this关键字加（）则会调用相同类中的构造方法，从而将另一个构造方法中的值传入本方法。
+	//要注意，this语句必须放在方法的第一行（和super一样）	
+	//构造方法之间不能递归调用（只能单向调用）
+		b = y;
+	}
+	Test(String x,int y,double z)
+	{
+		this(x,y);//使用起来就大大简化了重复代码的书写；同样的，也是通过传参的个数进行判断到底调用哪一个构造方法
+		
+		c = z;
+	}
+	Test(String x)
+	{
+		a = x;
+	}
+	public void output()
+	{
+		this.e = "36546";//	是可以被重新赋值的，不能改变的只有final
+		System.out.println(this.a+"\n"+this.b+"\n"+this.c);
+		System.out.println(e);//这里，非静态方法是可以访问静态成员变量的。
+//		这里this的使用时最基本的使用方法，即指向本类的成员。即使这里不写明，实际上this方法在这里也是存在的。
+//		此处使用的时期就是如果在方法中有和成员变量名字相同的变量名字的时候，可以使用this关键字来调用类中的成员变量。
+//		否则直接调用会调用本方法中同名变量。
+		/*
+		 * 隐式this会先在方法中找变量值，如果未找到就会去外部类中寻找变量。
+		 * 显式的this使用会直接调动外部类中的成员变量，这也是自动生成get或者set类时为什么会自动生成this。
+		 * */
+	}
+	public static void jkl()//这里静态方法不能调用类成员变量。
+//	静态不能访问非静态（因为静态方法没有创建内存，即没有地址）
+//	如果将成员变量改成静态即可访问
+	{
+//		static String j;		注意这里，局部变量不能加static修饰，只有成员变量可以。
+//		System.out.println(a);	会报错，说明静态不能访问非静态
+		System.out.println("aaaaaaaaa");
+	}
+//static 存在就是为了方便在没有创建对象的时候调用类中的方法。
+}
