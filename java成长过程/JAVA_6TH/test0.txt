@@ -1,0 +1,22 @@
+package JAVA_6TH;
+
+public class test0 {
+	public static void main(String[] args) {
+		test qwe = new test(21);
+//		这里使用new关键字来创建了一个新的对象.
+//		左边的qwe是对象名称,test是对象的类型.右边的new即对对象初始化.
+//		这里创建了一个QWE对象，对象是类的实例，即“创建了一个test类的qwe实例，实例拥有test的所有属性”，
+		String asd =qwe.changea("dgagaeh");//参数传递时直接调用方法将方法所需的值传递给方法
+//		如果想获取另一个类中方法的值，那么方法的构建时必须有返回值
+//		想调用另一个类中的成员变量不能直接调用只能通过在另一个类中写一个方法，通过另一个类中方法的调用来改变类中的值。
+		qwe.a = "idjfgnlaglgj";
+//		可以直接用对象.成员的方式来给成员变量直接赋值。
+		System.out.println(asd);
+		qwe.output();
+		test zxc = new test("36546515",123);
+		new test().output();//匿名对象调用，会在堆栈中开辟新的地址和区域，这是无论是赋值还是改变成员变量的值都只在这一个对象内有用
+		zxc.output1();
+	}
+//	对象是可以多次调用的，每调用一次就会在堆中开辟出一块新的内存来存放对象的数据
+//	堆存成员栈存地址
+}
