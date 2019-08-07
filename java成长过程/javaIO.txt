@@ -1,0 +1,31 @@
+File类new对象，传递参数为地址，两个参数前者为父路径，后者为子路径
+exists方法判断地址是否存在
+createNewFile创建一个新文件夹
+注意在java中引用路径需要双斜杠（用来转译），也可以用File.separator来代替分隔符
+getAbsolutePath：返回绝对路径
+getName：返回文件名称
+delete：直接删除，如果文件夹中有内容则不能删除（此时应指定具体文件）
+mkdirs：可以直接建立多级文件夹直到指定深度
+isFile：判断是否是文件，文件夹则返回false
+isDirectory：判断是否为文件夹
+list：返回一个数组类型的串，串中是所选集合中所有文件（此方法返回值是字符串所以只能获得文件名）
+lastModified：最后一次修改的时间（返回的是毫秒值）
+listFiles：返回的是一个元素为file类型的数组，可以直接进行关于数组元素的操作
+filenameFilter：接口，实现文件的过滤，其中需要实现accept方法，返回值为布尔类型，传入的参数
+第一个为路径第二个为文件名。如果只传递一个值需要实现接口内的构造
+
+FileOutputStream 类用来往文件中写数据（文件输出流）
+传入参数需要传入文件路径
+write用来向所选对象中写入数据
+getBytes方法：用来将string按照平台默认的方法转化为byte数组
+close方法：关闭输入流
+定义换行符：final String name（大写） = System.getProperty("line.separator");
+之后常量可以在后面直接使用作为换行符
+String类型不能直接放在write方法中，需要用getBytes方法来解析才能写入文件
+FileInputStream：用来从文件中读取数据（文件输入流）
+同样在实例化对象之前还是需要将地址作为参数传入
+想要读取数据需要向string类型中传递一个byte类型的数组
+直接new String(byteArray)即可
+
+读写相当于放入缓冲区中，如果不需要格式转换输出等不需要特别的对象接收就可以直接写入读入
+可以通过反复读文件的形式，每次读完如果还有内容就先将读过的内容写入直到全部读取完
